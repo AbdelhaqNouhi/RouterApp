@@ -2,20 +2,23 @@
 
 class Product
 {
-    private int | null $id;
-    private string $image;
-    private string $name;
-    private string $description;
-    private string $price;
-    private ProductModel $model;
-}
+  public function all()
+  {
+    echo json_encode($this->model->fetch_all());
+  }
 
-public function __construct(string $image, string $name, string $description, string $price, $id = null)
-{
-    $this->id = $id;
-    $this->image = $image;
-    $this->name = $name;
-    $this->description = $description;
-    $this->price = $price;
-    $this->model = new ProductModel();
+  public function add()
+  {
+    $this->model->add($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['phone'], $_POST['password']);
+  }
+
+  public function update()
+  {
+    $this->model->update($_POST['id'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['phone'], $_POST['password']);
+  }
+
+  public function delete()
+  {
+    $this->model->delete($_POST['id']);
+  }
 }
