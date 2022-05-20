@@ -1,0 +1,16 @@
+{
+    "name": "anouhi/voltr",
+    "description": "backend for volter volunteering community web app",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IOU4",
+            "email": "abdelhaqnouhi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vlucas/phpdotenv": "5.4.x-dev"
+    }
+}
